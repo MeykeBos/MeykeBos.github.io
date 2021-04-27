@@ -34,13 +34,13 @@
 <meta property="og:description" content="Project to predict the survival of the people on the Titanic." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://meykebos.github.io/post/chapter-6/" />
-<meta property="article:published_time" content="2021-02-12T11:25:05-04:00" />
-<meta property="article:modified_time" content="2021-02-12T11:25:05-04:00" /><meta property="og:site_name" content="Meyke" />
+<meta property="article:published_time" content="2021-03-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-25T00:00:00+00:00" /><meta property="og:site_name" content="Meyke" />
 <meta itemprop="name" content="Titanic">
 <meta itemprop="description" content="Project to predict the survival of the people on the Titanic.">
-<meta itemprop="datePublished" content="2021-02-12T11:25:05-04:00" />
-<meta itemprop="dateModified" content="2021-02-12T11:25:05-04:00" />
-<meta itemprop="wordCount" content="144">
+<meta itemprop="datePublished" content="2021-03-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="342">
 
 
 
@@ -170,22 +170,44 @@
       <h1 class="f1 athelas mt3 mb1">Titanic</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2021-02-12T11:25:05-04:00">February 12, 2021</time>
+      <time class="f6 mv4 dib tracked" datetime="2021-03-25T00:00:00Z">March 25, 2021</time>
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>We are delighted to be able to inform the reader, that during the whole of
-this scene, Gringoire and his piece had stood firm. His actors, spurred on
-by him, had not ceased to spout his comedy, and he had not ceased to
-listen to it. He had made up his mind about the tumult, and was determined
-to proceed to the end, not giving up the hope of a return of attention on
-the part of the public. This gleam of hope acquired fresh life, when he
-saw Quasimodo, Coppenole, and the deafening escort of the pope of the
-procession of fools quit the hall amid great uproar. The throng rushed
-eagerly after them. “Good,” he said to himself, “there go all the
-mischief-makers.” Unfortunately, all the mischief-makers constituted the
-entire audience. In the twinkling of an eye, the grand hall was empty.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>The Kaggle Titanic competition is one of the most well known machine learning competitions out there. The goal is to predict the fate of the passengers onboard of the Titanic. Did they survive the 1912 disaster?</p>
+<p>The Titanic competition was the first machine learning competition I participated in. After several submissions, I finally reached a top 6% score (place 1820 out of 33866 enrolled teams) with a Kaggle accuracy rate of 0.79665. Needless to say, I learned lots from this challenge and I enjoyed every step of the journey! I might even go back at one point to try to increase the accuracy to a score of over 0.8&hellip; who knows.</p>
+<figure>
+    <img src="https://meykebos.github.io/images/kaggleTitanicScore.png"/> 
+</figure>
+
+<p>In order to be able to build a classification model to predict the survival of the passengers, I first cleaned the data and imputed missing values. In order to find a meaningfull way to impute missing ages of the passengers, I created a small lineair regression model. Even though this model did not perform exceptionally well, I expected it to perform better then imputing with the mean for example.</p>
+<p>In the exploratory data analysis phase, I explored various feature engineering tricks to create meaningfull new features. A few examples:</p>
+<ul>
+<li>I created seperate columns for the title of the passengers. This was engineered from the name column.</li>
+<li>I created seperate features for the Deck passengers stayed on during their travels.</li>
+<li>I added a &lsquo;family count&rsquo;  feature. <figure>
+    <img src="https://meykebos.github.io/images/TitanicFamilyCount.png"/> 
+</figure>
+</li>
+<li>Mmost effort was put into a feature that established a mother-child relationship between the passengers. The hypothesis was that these groups of passengers (mothers travelling with their children) were most likely to survive or die together.</li>
+<li>Based on the ticket number, I created a feature that took into account other kinds of groups travelling together.</li>
+</ul>
+<p>With several visualiztions and calculations, I explored the relation between survival and the various features.
+<figure>
+    <img src="https://meykebos.github.io/images/TitanicDiscreteOrdinalCorrelation.png"/> 
+</figure>
+</p>
+<p>I tested several models to see which model performed best. This turned out to be a RandomForestClassifier with a max depth of 5 and consisting of 750 trees.</p>
+<p><figure>
+    <img src="https://meykebos.github.io/images/TitanicModel.png"/> 
+</figure>
+
+<figure>
+    <img src="https://meykebos.github.io/images/TitanicFeatureImportance.png"/> 
+</figure>
+</p>
+<p>Click <a href="https://github.com/MeykeBos/Titanic/blob/main/Titanic.ipynb">here</a> to view the code on GitHub.</p>
 <ul class="pa0">
   
 </ul>
