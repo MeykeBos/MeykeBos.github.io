@@ -8,6 +8,35 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://meykebos.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Vendee Globe</title>
+      <link>https://meykebos.github.io/post/chapter-4/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://meykebos.github.io/post/chapter-4/</guid>
+      <description>To date, the Vendée Globe is the greatest sailing race round the world, solo, non-stop and without assistance, various sailors travel the seas. The competitors undertake a circumnavigation via the three capes (Good Hope, Leeuwin and Horn). The Vendee Globe is now called the Everest of the seas and is an extraordinary race.
+In order to visualise this race, I created a Lambda architecture. A real-time layer to display the current location of the sailors at all time.</description>
+    </item>
+    
+    <item>
+      <title>News Headlines Analysis</title>
+      <link>https://meykebos.github.io/post/chapter-5/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://meykebos.github.io/post/chapter-5/</guid>
+      <description>I analysed a news dataset from 2014 with the primary objective to gain insight on some of the more important things that happened during the timeframe covered by the dataset. First, I did some data cleaning in excel and notepad++. After, I first did some exploratory data analysis in python. It allowed me to take a closer look at the data, clean it even further and create some additional features. I extracted, for example the locations that appeared in the headlines.</description>
+    </item>
+    
+    <item>
+      <title>Disaster Tweets</title>
+      <link>https://meykebos.github.io/post/chapter-6/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://meykebos.github.io/post/chapter-6/</guid>
+      <description>The &amp;ldquo;getting started with NLP&amp;rdquo; Kaggle competition is the Disaster News dataset. Given a large amount of tweets, all classified with a theme, it is your taks to predict which tweets are about a real disaster and which are not. In short, this challenge is all about the nuance that is embodied in language.
+In the Exploratory Data Analysis phase, I created a lot of new features: average word length, count of special characters, amount of retweets, and so on.</description>
+    </item>
+    
+    <item>
       <title>Customer Sentiment Analysis</title>
       <link>https://meykebos.github.io/post/chapter-2/</link>
       <pubDate>Sun, 25 Apr 2021 00:00:00 +0000</pubDate>
@@ -30,10 +59,10 @@ I submitted 7 predictions to Kaggle. My higest score was 0.12881, good for a 238
     
     <item>
       <title>Titanic</title>
-      <link>https://meykebos.github.io/post/chapter-6/</link>
+      <link>https://meykebos.github.io/post/chapter-3/</link>
       <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://meykebos.github.io/post/chapter-6/</guid>
+      <guid>https://meykebos.github.io/post/chapter-3/</guid>
       <description>The Kaggle Titanic competition is one of the most well known machine learning competitions out there. The goal is to predict the fate of the passengers onboard of the Titanic. Did they survive the 1912 disaster?
 The Titanic competition was the first machine learning competition I participated in. After several submissions, I finally reached a top 6% score (place 1820 out of 33866 enrolled teams) with a Kaggle accuracy rate of 0.</description>
     </item>
